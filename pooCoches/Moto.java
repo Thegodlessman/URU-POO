@@ -2,19 +2,19 @@ package pooCoches;
 
 public class Moto {
 	
-	private int ruedas;
-	private int largo; 
-	private int ancho;
-	private int motor;
-	private int peso;
+	private String ruedas;
+	private String largo; 
+	private String ancho;
+	private String motor;
+	private String peso;
 	
 	public Moto() {
 		
-		ruedas = 2;
-		largo = 1000;
-		ancho = 150;
-		motor = 800;
-		peso = 275;
+		ruedas = "2";
+		largo = "1000";
+		ancho = "150";
+		motor = "800";
+		peso = "275";
 		
 	}
 	
@@ -36,19 +36,19 @@ public class Moto {
 	}
 	
 	//Setter
-	public void setRuedas(int nuevo_ruedas) {
+	public void setRuedas(String nuevo_ruedas) {
 		this.ruedas = nuevo_ruedas;
 	}
-	public void setLargo(int nuevo_largo) {
+	public void setLargo(String nuevo_largo) {
 		this.largo = nuevo_largo;
 	}
-	public void setAncho(int nuevo_ancho) {
+	public void setAncho(String nuevo_ancho) {
 		this.ancho = nuevo_ancho;
 	}
-	public void setMotor(int nuevo_motor) {
+	public void setMotor(String nuevo_motor) {
 		this.motor = nuevo_motor;
 	}
-	public void setPeso(int nuevo_peso) {
+	public void setPeso(String nuevo_peso) {
 		this.peso = nuevo_peso;
 	}
 }
