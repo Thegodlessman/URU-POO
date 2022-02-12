@@ -1,6 +1,7 @@
 package pooCoches;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class UsoCoches {
 	
@@ -11,6 +12,7 @@ public class UsoCoches {
 		Coche Renault = new Coche();
 		Camioneta Bronco = new Camioneta();
 		
+		String op; 
 		int exit = 0;
 		int opcion;
 		
@@ -21,8 +23,8 @@ public class UsoCoches {
 			System.out.println("2. Modificar informacion de un coche");
 			System.out.println("3. Salir");
 			
-			System.out.println("  ¿Que opcion desea elegir?");
-			opcion = entrada.nextInt();
+			op = JOptionPane.showInputDialog("Que opción desea seleccionar");
+			opcion = Integer.parseInt(op);
 		
 			switch(opcion) {
 				case 1: 
@@ -32,12 +34,12 @@ public class UsoCoches {
 					System.out.println("2. Moto - Bucatti");
 					System.out.println("3. Camioneta - Bronco");
 					
-					System.out.println("  ¿Que opcion desea elegir?");
-					opcion = entrada.nextInt();
+					op = JOptionPane.showInputDialog("Que opción desea seleccionar");
+					opcion = Integer.parseInt(op);
 					
 					switch(opcion) {
 					case 1:
-						System.out.println("\nEspecificaciones de: Renault");
+						System.out.println("\nEspecificaciones de: Renault\n");
 						
 						System.out.println(Renault.getRuedas());
 						System.out.println(Renault.getLargo());
@@ -45,10 +47,12 @@ public class UsoCoches {
 						System.out.println(Renault.getMotor());
 						System.out.println(Renault.getPeso());
 						
-						System.out.println("\n\n");
+						System.out.println("\nPresiona una cualquier tecla para continuar...");
+						new java.util.Scanner(System.in).nextLine();
+						
 						break;
 					case 2:
-						System.out.println("\nEspecificaciones de: Bucatti");
+						System.out.println("\nEspecificaciones de: Bucatti\n");
 						
 						System.out.println(Bucatti.getRuedas());
 						System.out.println(Bucatti.getLargo());
@@ -56,10 +60,12 @@ public class UsoCoches {
 						System.out.println(Bucatti.getMotor());
 						System.out.println(Bucatti.getPeso());
 						
-						System.out.println("\n\n");
+						System.out.println("\nPresiona una cualquier tecla para continuar...");
+						new java.util.Scanner(System.in).nextLine();
+						
 						break;
 					case 3:
-						System.out.println("\nEspecificaciones de: Bronco");
+						System.out.println("\nEspecificaciones de: Bronco\n");
 						
 						System.out.println(Bronco.getRuedas());
 						System.out.println(Bronco.getLargo());
@@ -67,7 +73,8 @@ public class UsoCoches {
 						System.out.println(Bronco.getMotor());
 						System.out.println(Bronco.getPeso());
 						
-						System.out.println("\n\n");
+						System.out.println("\nPresiona una cualquier tecla para continuar...");
+						new java.util.Scanner(System.in).nextLine();
 						break;
 					default: 
 					
@@ -84,56 +91,48 @@ public class UsoCoches {
 					System.out.println("2. Modificar: Moto - Bucatti");
 					System.out.println("3. Modificar: Camioneta - Bronco");
 					
-					System.out.println("  ¿Que opcion desea elegir?");
-					opcion = entrada.nextInt();
+					op = JOptionPane.showInputDialog("Que opción desea seleccionar");
+					opcion = Integer.parseInt(op);
 					
 					switch(opcion) {
 						case 1:
-							System.out.println("\nModificar: Renault");
+							System.out.println("\nModificando Renault...");
 							
-							System.out.println("\nIngrese el nuevo valor de Ruedas");
-							Renault.setRuedas(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Largo");
-							Renault.setLargo(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Ancho");
-							Renault.setAncho(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Motor");
-							Renault.setMotor(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Peso");
-							Renault.setPeso(entrada.nextInt());
+							Renault.setRuedas(JOptionPane.showInputDialog("\nIngrese el nuevo valor para las ruedas"));
+							Renault.setLargo(JOptionPane.showInputDialog("Ingrese el nuevo valor para el largo"));
+							Renault.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
+							Renault.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
+							Renault.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
+							
+							System.out.println("\nSe ha modidicado los datos de Renault, presione cualquier tecla para continuar...");
+							new java.util.Scanner(System.in).nextLine();
 							
 							System.out.println("\n\n");
 							break;
 						case 2:
-							System.out.println("\nModificar: Bucatti");
+							System.out.println("\nModificando Bucatti...");
 							
-							System.out.println("\nIngrese el nuevo valor de Ruedas");
-							Bucatti.setRuedas(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Largo");
-							Bucatti.setLargo(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Ancho");
-							Bucatti.setAncho(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Motor");
-							Bucatti.setMotor(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Peso");
-							Bucatti.setPeso(entrada.nextInt());
+							Bucatti.setRuedas(JOptionPane.showInputDialog("\nIngrese el nuevo valor para las ruedas"));
+							Bucatti.setLargo(JOptionPane.showInputDialog("Ingrese el nuevo valor para el largo"));
+							Bucatti.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
+							Bucatti.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
+							Bucatti.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
 							
+							System.out.println("\nSe ha modidicado los datos de Bucatti, presione cualquier tecla para continuar...");
+							new java.util.Scanner(System.in).nextLine();
 							System.out.println("\n\n");
 							break;
 						case 3:
-							System.out.println("\nModificar: Bronco");
+							System.out.println("\nModificando Bronco...");
 							
-							System.out.println("\nIngrese el nuevo valor de Ruedas");
-							Bronco.setRuedas(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Largo");
-							Bronco.setLargo(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Ancho");
-							Bronco.setAncho(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Motor");
-							Bronco.setMotor(entrada.nextInt());
-							System.out.println("Ingrese el nuevo valor de Peso");
-							Bronco.setPeso(entrada.nextInt());
+							Bronco.setRuedas(JOptionPane.showInputDialog("\nIngrese el nuevo valor para las ruedas"));
+							Bronco.setLargo(JOptionPane.showInputDialog("Ingrese el nuevo valor para el largo"));
+							Bronco.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
+							Bronco.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
+							Bronco.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
 							
+							System.out.println("\nSe ha modidicado los datos de Bronco, presione cualquier tecla para continuar...");
+							new java.util.Scanner(System.in).nextLine();
 							System.out.println("\n\n");
 						default: 
 							System.out.println("\n La opcion que ha seleccionado no esta disponible... Intente de nuevo\n\n");
