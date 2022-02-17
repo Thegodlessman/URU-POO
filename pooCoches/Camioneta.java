@@ -7,8 +7,12 @@ public class Camioneta {
 	private String motor;
 	private String peso;
 	
+	private String color; 
+	private boolean climatizador = true , asientosCuero = false; 
+	
 	public Camioneta() {
 		
+		color="blanco";
 		ruedas = "4";
 		largo = "3000";
 		ancho = "350";
@@ -33,6 +37,25 @@ public class Camioneta {
 	public String getPeso(){
 		return "La comioneta tiene un peso de: "+peso+" Unidades";
 	}
+	public String getColor() {
+		return "El coor de la camioneta es: "+color;
+	}
+	
+	public String getAsientos() { 
+		if(asientosCuero == true) {
+			return "La camioneta tiene asientos de cuero"; 
+		}else {
+			return "La camioneta tiene asientos de serie";
+		}
+	}
+	
+	public String getClimatizador() { 
+		if(climatizador == false) {
+			return "La camioneta NO tiene climatizador"; 
+		}else {
+			return "La camioneta SI tiene climatizador";
+		}
+	}
 	
 	//Setter
 	public void setRuedas(String nuevo_ruedas) {
@@ -49,5 +72,25 @@ public class Camioneta {
 		}
 	public void setPeso(String nuevo_peso) {
 		this.peso = nuevo_peso;
+	}
+	
+	public void setColor(String nuevo_color) {
+		this.color = nuevo_color; 
+	}
+	
+	public void setAsientos(String asientos) {
+		if(asientos.equalsIgnoreCase("si")) {
+			this.asientosCuero = true; 
+		}else {
+			this.asientosCuero = false; 
+		}
+	}
+	
+	public void setClimatizador(String asientos) {
+		if(asientos.equalsIgnoreCase("no")) {
+			this.climatizador = false; 
+		}else {
+			this.climatizador = true; 
+		}
 	}
 }
