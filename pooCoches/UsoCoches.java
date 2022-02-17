@@ -46,6 +46,9 @@ public class UsoCoches {
 						System.out.println(Renault.getAncho());
 						System.out.println(Renault.getMotor());
 						System.out.println(Renault.getPeso());
+						System.out.println(Renault.getColor());
+						System.out.println(Renault.getAsientos());
+						System.out.println(Renault.getClimatizador());
 						
 						System.out.println("\nPresiona una cualquier tecla para continuar...");
 						new java.util.Scanner(System.in).nextLine();
@@ -59,6 +62,8 @@ public class UsoCoches {
 						System.out.println(Bucatti.getAncho());
 						System.out.println(Bucatti.getMotor());
 						System.out.println(Bucatti.getPeso());
+						System.out.println(Bucatti.getColor());
+						System.out.println(Bucatti.getAsientos());
 						
 						System.out.println("\nPresiona una cualquier tecla para continuar...");
 						new java.util.Scanner(System.in).nextLine();
@@ -72,6 +77,9 @@ public class UsoCoches {
 						System.out.println(Bronco.getAncho());
 						System.out.println(Bronco.getMotor());
 						System.out.println(Bronco.getPeso());
+						System.out.println(Bronco.getColor());
+						System.out.println(Bronco.getAsientos());
+						System.out.println(Bronco.getClimatizador());
 						
 						System.out.println("\nPresiona una cualquier tecla para continuar...");
 						new java.util.Scanner(System.in).nextLine();
@@ -103,6 +111,9 @@ public class UsoCoches {
 							Renault.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
 							Renault.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
 							Renault.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
+							Renault.setColor(JOptionPane.showInputDialog("Ingrese el nuevo color del coche"));
+							Renault.setAsientos(JOptionPane.showInputDialog("Desea tener asientos de cuero (Si o No)"));
+							Renault.setClimatizador(JOptionPane.showInputDialog("Desea tener climatizador de cuero (Si o No)"));
 							
 							System.out.println("\nSe ha modidicado los datos de Renault, presione cualquier tecla para continuar...");
 							new java.util.Scanner(System.in).nextLine();
@@ -117,6 +128,8 @@ public class UsoCoches {
 							Bucatti.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
 							Bucatti.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
 							Bucatti.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
+							Bucatti.setColor(JOptionPane.showInputDialog("Ingrese el nuevo color del coche"));
+							Bucatti.setAsientos(JOptionPane.showInputDialog("Desea tener asientos de cuero (Si o No)"));
 							
 							System.out.println("\nSe ha modidicado los datos de Bucatti, presione cualquier tecla para continuar...");
 							new java.util.Scanner(System.in).nextLine();
@@ -130,6 +143,9 @@ public class UsoCoches {
 							Bronco.setAncho(JOptionPane.showInputDialog("Ingrese el nuevo valor para el ancho"));
 							Bronco.setMotor(JOptionPane.showInputDialog("Ingrese el nuevo valor para la potencia del motor"));
 							Bronco.setPeso(JOptionPane.showInputDialog("Ingrese el nuevo valor para del peso"));
+							Bronco.setColor(JOptionPane.showInputDialog("Ingrese el nuevo color del coche"));
+							Bronco.setAsientos(JOptionPane.showInputDialog("Desea tener asientos de cuero (Si o No)"));
+							Bronco.setClimatizador(JOptionPane.showInputDialog("Desea tener climatizador de cuero (Si o No)"));
 							
 							System.out.println("\nSe ha modidicado los datos de Bronco, presione cualquier tecla para continuar...");
 							new java.util.Scanner(System.in).nextLine();
