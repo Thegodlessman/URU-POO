@@ -8,8 +8,12 @@ public class Moto {
 	private String motor;
 	private String peso;
 	
+	private String color; 
+	private boolean asientosCuero = false; 
+	
 	public Moto() {
 		
+		color="negro";
 		ruedas = "2";
 		largo = "1000";
 		ancho = "150";
@@ -34,6 +38,18 @@ public class Moto {
 	public String getPeso(){
 		return "La moto tiene un peso de: "+peso+" Unidades";
 	}
+	public String getColor() {
+		return "El color de la moto es: "+color;
+	}
+	
+	public String getAsientos() { 
+		if(asientosCuero == true) {
+			return "La moto tiene asientos de cuero"; 
+		}else {
+			return "La moto tiene asientos de serie";
+		}
+	}
+	
 	
 	//Setter
 	public void setRuedas(String nuevo_ruedas) {
@@ -50,5 +66,16 @@ public class Moto {
 	}
 	public void setPeso(String nuevo_peso) {
 		this.peso = nuevo_peso;
+	}
+	public void setColor(String nuevo_color) {
+		this.color = nuevo_color; 
+	}
+	
+	public void setAsientos(String asientos) {
+		if(asientos.equalsIgnoreCase("si")) {
+			this.asientosCuero = true; 
+		}else {
+			this.asientosCuero = false; 
+		}
 	}
 }
